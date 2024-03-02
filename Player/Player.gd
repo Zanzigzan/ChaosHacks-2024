@@ -28,5 +28,7 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-func die():
-	pass
+func _on_body_entered(body):
+	print("x")
+	if body is Enemy:
+		print("x")
