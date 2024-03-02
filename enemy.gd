@@ -1,5 +1,5 @@
 class_name Enemy extends Area2D
-
+#
 @export var speed = 500
 var is_wiggling = true
 var wiggle_amount = .5  # Adjust for more or less wiggle

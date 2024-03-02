@@ -5,7 +5,8 @@ extends Node2D
 var scroll_speed = 1800
 
 func _ready():
-	pass
+	$EventTimer.start()
+	
 	
 
 func _process(delta):
@@ -18,3 +19,9 @@ func _on_enemy_spawn_timer_timeout():
 	var enemy = enemy_scenes.pick_random().instantiate()
 	enemy.global_position = Vector2(randf_range(50, 500), -50)
 	$EnemyContainer.add_child(enemy)
+	
+	
+
+func _on_event_timer_timeout():
+	$EventsMsgs.show_message("SNOWFALL!!!!", "Cars slowed by 50%")
+	

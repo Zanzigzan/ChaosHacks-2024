@@ -19,7 +19,6 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.5, 2.5)
 size_flags_horizontal = 4
-text = "Snowfall!"
 
 [node name="eventDescription" type="Label" parent="."]
 anchors_preset = 3
@@ -31,7 +30,6 @@ offset_left = -200.0
 offset_top = -75.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "Event Description"
 
 [node name="msgTimer" type="Timer" parent="."]
 wait_time = 2.0
