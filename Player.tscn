@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dcxs6lviy8iqy"]
 
-[ext_resource type="Script" path="res://Player/Player.gd" id="1_mmxc6"]
+[ext_resource type="Script" path="res://Player.gd" id="1_mmxc6"]
 [ext_resource type="Texture2D" uid="uid://khcrw27tkbxr" path="res://Resources/Sprites/Cars/WhiteCar.png" id="2_bybg5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wn46o"]
