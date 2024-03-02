@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0uf3xsnhgll4"]
+[gd_scene load_steps=5 format=3 uid="uid://blejl2dspkg14"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_pvroe"]
 [ext_resource type="Texture2D" uid="uid://ca0hxsb7qei2m" path="res://Resources/assets/cars.png" id="2_qonbe"]
