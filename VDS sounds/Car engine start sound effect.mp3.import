@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dvemrmeuq2uhr"
+path="res://.godot/imported/Car engine start sound effect.mp3-176635b34fe1fae8842d7cd45b84ee97.mp3str"
+
+[deps]
+
+source_file="res://VDS sounds/Car engine start sound effect.mp3"
+dest_files=["res://.godot/imported/Car engine start sound effect.mp3-176635b34fe1fae8842d7cd45b84ee97.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

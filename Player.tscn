@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcxs6lviy8iqy"]
+[gd_scene load_steps=7 format=3 uid="uid://dcxs6lviy8iqy"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_mmxc6"]
 [ext_resource type="Texture2D" uid="uid://khcrw27tkbxr" path="res://Resources/Sprites/Cars/WhiteCar.png" id="2_bybg5"]
 [ext_resource type="AudioStream" uid="uid://cu2hvgi25elb0" path="res://VDS sounds/Car Horn - Sound Effect.mp3" id="3_k3pdj"]
 [ext_resource type="AudioStream" uid="uid://o36fwr741vd3" path="res://VDS sounds/Hit Sounds - Sound Effects for editing.mp3" id="4_bp3tu"]
+[ext_resource type="AudioStream" uid="uid://dvemrmeuq2uhr" path="res://VDS sounds/Car engine start sound effect.mp3" id="5_uwsym"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wn46o"]
 radius = 37.0
@@ -27,3 +28,6 @@ stream = ExtResource("3_k3pdj")
 
 [node name="Crash" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_bp3tu")
+
+[node name="CarStart" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_uwsym")
