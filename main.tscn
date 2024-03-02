@@ -5,14 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://dcxs6lviy8iqy" path="res://Player.tscn" id="3_foi4r"]
 [ext_resource type="Texture2D" uid="uid://dxk40741uyss1" path="res://Resources/Background/Road.png" id="3_spre1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d338k"]
-size = Vector2(154, 1276)
-
 [sub_resource type="Curve2D" id="Curve2D_8atcv"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 75, -320, 0, 0, 0, 0, 605, -323, 0, 0, 0, 0, 72, -328, 0, 0, 0, 0, 75, -320)
 }
 point_count = 4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d338k"]
+size = Vector2(154, 1276)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_7m5w8")
@@ -31,14 +31,6 @@ texture = ExtResource("3_spre1")
 [node name="Player" parent="." instance=ExtResource("3_foi4r")]
 position = Vector2(385, 826)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player"]
-position = Vector2(-317, -237)
-shape = SubResource("RectangleShape2D_d338k")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Player"]
-position = Vector2(240, -223)
-shape = SubResource("RectangleShape2D_d338k")
-
 [node name="EnemySpawnTimer" type="Timer" parent="."]
 autostart = true
 
@@ -51,5 +43,15 @@ position = Vector2(75, -320)
 rotation = -0.00566032
 
 [node name="EnemyContainer" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(68, 589)
+shape = SubResource("RectangleShape2D_d338k")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(625, 603)
+shape = SubResource("RectangleShape2D_d338k")
 
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]
