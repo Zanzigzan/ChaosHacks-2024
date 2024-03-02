@@ -6,17 +6,19 @@
 script = ExtResource("1_45moq")
 
 [node name="PlayButton" type="Button" parent="."]
-offset_left = 87.0
-offset_top = 411.0
-offset_right = 224.0
-offset_bottom = 768.0
+offset_left = 100.0
+offset_top = 220.0
+offset_right = 240.0
+offset_bottom = 570.0
 tooltip_text = "Start the game!"
 text = "PLAY"
 
 [node name="QuitButton" type="Button" parent="."]
-offset_left = 333.0
-offset_top = 413.0
-offset_right = 467.0
-offset_bottom = 763.0
+offset_left = 355.0
+offset_top = 209.0
+offset_right = 495.0
+offset_bottom = 559.0
 tooltip_text = "Quit the game to the desktop"
 text = "QUIT"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
