@@ -5,11 +5,16 @@ extends Node2D
 var scroll_speed = 1800
 var countEvent = 0
 
+var screen_size
+
+func start(pos):
+	position = pos
+
+
 func _ready():
 	$EventTimer.start()
 	
-	
-	
+	screen_size = get_viewport_rect().size
 	
 
 func _process(delta):
@@ -20,7 +25,7 @@ func _process(delta):
 
 func _on_enemy_spawn_timer_timeout():
 	var enemy = enemy_scenes.pick_random().instantiate()
-	enemy.global_position = Vector2(randf_range(50, 500), -50)
+	enemy.global_position = Vector2(randf_range(240, 480), -50)
 	$EnemyContainer.add_child(enemy)
 	
 	
@@ -37,5 +42,5 @@ func _on_event_timer_timeout():
 		$EventsMsgs.show_message("CAUTION: ACIDENT AHEAD", "Transit!")
 	else:
 		$EventsMsgs.show_message("SNOW AND RICHMOND DRIVER!!!!", "CHAOOOS!!!")
-	
+		
 	
