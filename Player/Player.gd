@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 const max_speed = 400
 const accel = 3000
@@ -29,8 +29,6 @@ func player_movement(delta):
 		velocity = velocity.limit_length(max_speed)
 	move_and_slide()
 
-func _on_body_entered(body):
+func die()
 	print("x")
-	if body is Enemy:
-		print("x")
-
+ 
