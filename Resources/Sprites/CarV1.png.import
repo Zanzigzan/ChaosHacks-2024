@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cflr1yrun63g6"
-path="res://.godot/imported/GoogleMapsBG.png-6736df1dfff773975f48f4e266a76b7b.ctex"
+uid="uid://c4mbn6rga06c2"
+path="res://.godot/imported/CarV1.png-1d0da99f3760a7dbdd1c57f1915077f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Background/GoogleMapsBG.png"
-dest_files=["res://.godot/imported/GoogleMapsBG.png-6736df1dfff773975f48f4e266a76b7b.ctex"]
+source_file="res://Resources/Sprites/CarV1.png"
+dest_files=["res://.godot/imported/CarV1.png-1d0da99f3760a7dbdd1c57f1915077f9.ctex"]
 
 [params]
 
