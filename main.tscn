@@ -2,15 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://cj3471gxtfwn2" path="res://Resources/Background/GoogleMapsBG.png" id="1_5itkp"]
 [ext_resource type="Script" path="res://main.gd" id="1_7m5w8"]
-<<<<<<< HEAD
+
 [ext_resource type="PackedScene" uid="uid://blejl2dspkg14" path="res://enemy.tscn" id="2_eitbt"]
 [ext_resource type="PackedScene" uid="uid://dcxs6lviy8iqy" path="res://Player/Player.tscn" id="3_foi4r"]
 [ext_resource type="Texture2D" uid="uid://ckn4f7axwvdg4" path="res://Resources/Background/Road2.png" id="3_rpoal"]
 [ext_resource type="Texture2D" uid="uid://dxk40741uyss1" path="res://Resources/Background/Road.png" id="3_rsyjb"]
-=======
-[ext_resource type="PackedScene" uid="uid://c0uf3xsnhgll4" path="res://enemy.tscn" id="2_eitbt"]
-[ext_resource type="PackedScene" uid="uid://dcxs6lviy8iqy" path="res://Player/Player.tscn" id="3_foi4r"]
->>>>>>> d4e13044d7d2ec899c1c174d6c2ed8c3fa2e4a7b
 
 [sub_resource type="Curve2D" id="Curve2D_8atcv"]
 _data = {
@@ -35,16 +31,12 @@ scale = Vector2(0.769445, 0.994681)
 texture = ExtResource("3_rpoal")
 
 [node name="Road" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-<<<<<<< HEAD
-position = Vector2(335, 639)
-texture = ExtResource("3_rsyjb")
-=======
+
 scale = Vector2(1.5, 1.424)
 texture = ExtResource("1_5itkp")
 centered = false
 region_enabled = true
 region_rect = Rect2(2.08165e-12, 2.08165e-12, 564, 1128)
->>>>>>> d4e13044d7d2ec899c1c174d6c2ed8c3fa2e4a7b
 
 [node name="Player" parent="." instance=ExtResource("3_foi4r")]
 position = Vector2(385, 826)
