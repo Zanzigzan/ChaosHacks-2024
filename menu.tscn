@@ -1,34 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://06dijardu0nf"]
+[gd_scene load_steps=2 format=3 uid="uid://06dijardu0nf"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_45moq"]
-[ext_resource type="Texture2D" uid="uid://cewjcjnmtbp2u" path="res://Resources/Background/GoogleMapsBG.png" id="2_b4660"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_45moq")
 
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 100.0
+offset_top = 220.0
+offset_right = 240.0
+offset_bottom = 570.0
+tooltip_text = "Start the game!"
+text = "PLAY"
+
 [node name="QuitButton" type="Button" parent="."]
-offset_left = 320.0
-offset_top = 270.0
-offset_right = 460.0
-offset_bottom = 620.0
+offset_left = 355.0
+offset_top = 209.0
+offset_right = 495.0
+offset_bottom = 559.0
 tooltip_text = "Quit the game to the desktop"
 text = "QUIT"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-
-[node name="GoogleMapsBg" type="Sprite2D" parent="ParallaxBackground"]
-show_behind_parent = true
-light_mask = 0
-position = Vector2(284.75, 374.5)
-scale = Vector2(1.20878, 0.993351)
-texture = ExtResource("2_b4660")
-
-[node name="PlayButton" type="Button" parent="."]
-offset_left = 100.0
-offset_top = 270.0
-offset_right = 240.0
-offset_bottom = 620.0
-tooltip_text = "Start the game!"
-text = "PLAY"
