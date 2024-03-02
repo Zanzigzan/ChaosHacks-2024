@@ -1,6 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://cco84wtna3y6g"]
+<<<<<<< Updated upstream
+[gd_scene load_steps=5 format=3 uid="uid://cx2bc0a26gbep"]
 
-[ext_resource type="Texture2D" uid="uid://cj3471gxtfwn2" path="res://Resources/Background/GoogleMapsBG.png" id="1_5itkp"]
+[ext_resource type="Texture2D" uid="uid://cewjcjnmtbp2u" path="res://Resources/Background/GoogleMapsBG.png" id="1_5itkp"]
+=======
+[gd_scene load_steps=5 format=3 uid="uid://cp54u6l2jlcvm"]
+
+[ext_resource type="Texture2D" uid="uid://qpxb0kmjwrc8" path="res://Resources/Background/GoogleMapsBG.png" id="1_5itkp"]
+>>>>>>> Stashed changes
 [ext_resource type="Script" path="res://main.gd" id="1_7m5w8"]
 [ext_resource type="PackedScene" uid="uid://dcxs6lviy8iqy" path="res://Player/Player.tscn" id="3_foi4r"]
 
