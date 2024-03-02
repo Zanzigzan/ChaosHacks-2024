@@ -39,7 +39,8 @@ func _on_event_timer_timeout():
 		$EventsMsgs.show_message("RICHMOND DRIVER!!!!", "BE AWARE!!!")
 		countEvent += 1
 	elif countEvent == 2:
-		$EventsMsgs.show_message("CAUTION: ACIDENT AHEAD", "Transit!")
+		$EventsMsgs.show_message("ACIDENT AHEAD", "Transit!")
+		countEvent += 1
 	else:
 		$EventsMsgs.show_message("SNOW AND RICHMOND DRIVER!!!!", "CHAOOOS!!!")
 		
