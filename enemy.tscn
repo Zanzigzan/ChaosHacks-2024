@@ -12,6 +12,7 @@ height = 56.0
 position = Vector2(585, 299)
 collision_layer = 2
 collision_mask = 3
+collision_priority = 2.0
 gravity_scale = 0.0
 script = ExtResource("1_pvroe")
 
@@ -26,3 +27,5 @@ texture = ExtResource("2_qonbe")
 region_enabled = true
 region_rect = Rect2(0, -0.127, 30.589, 51.937)
 script = ExtResource("3_0imhu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
