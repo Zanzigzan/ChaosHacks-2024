@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5lbwy5hprciv"]
+
+[ext_resource type="Script" path="res://richmond_driver.gd" id="1_fuvbh"]
+[ext_resource type="Texture2D" uid="uid://c4mbn6rga06c2" path="res://Resources/Sprites/CarV1.png" id="1_lk0x1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_txtrq"]
+radius = 59.0
+height = 298.0
+
+[node name="RichmondDriver" type="Area2D"]
+position = Vector2(450, 1500)
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_fuvbh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-70.25, -145.25)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_lk0x1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-70, -150)
+shape = SubResource("CapsuleShape2D_txtrq")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
