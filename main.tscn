@@ -48,5 +48,9 @@ autostart = true
 
 [node name="EventsMsgs" parent="." instance=ExtResource("5_wichx")]
 
+[node name="WigglingTimer" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]
 [connection signal="timeout" from="EventTimer" to="." method="_on_event_timer_timeout"]
+[connection signal="timeout" from="WigglingTimer" to="." method="_on_wiggling_timer_timeout"]

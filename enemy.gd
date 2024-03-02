@@ -1,7 +1,7 @@
 class_name Enemy extends Area2D
 #
 @export var speed = 500
-var is_wiggling = true
+var is_wiggling = false
 var wiggle_amount = .5  # Adjust for more or less wiggle
 var wiggle_speed = 10 # Lower is faster, higher is slower
 var wiggle_timer = 0
@@ -24,5 +24,5 @@ func _on_body_entered(body):
 		body.die()
 	queue_free()
 
-func start_wiggling():
-	is_wiggling = true
+func set_wiggling(wiggling):
+	is_wiggling = wiggling
