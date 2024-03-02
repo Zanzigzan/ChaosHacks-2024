@@ -11,7 +11,7 @@ func _ready():
 
 func _process(delta):
 	global_position.y += speed * delta
-
+	
 	if is_wiggling:
 		wiggle_timer += 1
 		if wiggle_timer % wiggle_speed == 0:

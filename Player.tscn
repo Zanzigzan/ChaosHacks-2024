@@ -26,8 +26,11 @@ texture = ExtResource("2_bybg5")
 [node name="CarHorn" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_k3pdj")
 
+[node name="CarStart" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_uwsym")
+
 [node name="Crash" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_bp3tu")
 
-[node name="CarStart" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_uwsym")
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

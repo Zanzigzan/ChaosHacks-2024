@@ -45,4 +45,6 @@ func player_movement(delta):
 	move_and_slide()
 
 func die():
+	$Crash.play()
+	await get_tree().create_timer(10.0).timeout
 	queue_free()
