@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cu2hvgi25elb0"
+path="res://.godot/imported/Car Horn - Sound Effect.mp3-12d22b87a884776e0ba9cc00d09275bb.mp3str"
+
+[deps]
+
+source_file="res://VDS sounds/Car Horn - Sound Effect.mp3"
+dest_files=["res://.godot/imported/Car Horn - Sound Effect.mp3-12d22b87a884776e0ba9cc00d09275bb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
