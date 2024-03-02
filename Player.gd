@@ -4,6 +4,14 @@ const max_speed = 600
 const accel = 3000
 const friction = 5000
 
+var screen_size
+
+func start(pos):
+	position = pos
+
+func _ready():
+	screen_size = get_viewport_rect().size
+
 var input = Vector2.ZERO
 func _physics_process(delta):
 	player_movement(delta)
@@ -27,6 +35,8 @@ func player_movement(delta):
 	else:
 		velocity += (input * accel * delta)
 		velocity = velocity.limit_length(max_speed)
+		
+	position = position.clamp(Vector2(200, 0), screen_size - Vector2(200, 0))
 	move_and_slide()
 
 func die():
