@@ -31,4 +31,3 @@ func player_movement(delta):
 
 func die():
 	print("x")
- 
