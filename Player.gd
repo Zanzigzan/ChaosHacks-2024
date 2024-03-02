@@ -15,10 +15,13 @@ func _ready():
 var input = Vector2.ZERO
 func _physics_process(delta):
 	player_movement(delta)
-	
+	if Input.is_action_just_pressed("ui_horn"):
+		
+		$CarHorn.play()
 func get_input():
 	input.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
 	input.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
+	
 	#print("x", input.x)
 	#print("y", input.y)
 	return input.normalized()

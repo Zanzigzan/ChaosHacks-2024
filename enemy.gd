@@ -1,16 +1,28 @@
 class_name Enemy extends Area2D
 #
 @export var speed = 500
+var is_wiggling = true
+var wiggle_amount = .5  # Adjust for more or less wiggle
+var wiggle_speed = 10 # Lower is faster, higher is slower
+var wiggle_timer = 0
 
-func _physics_process(delta):
+func _ready():
+	pass
+
+func _process(delta):
 	global_position.y += speed * delta
 
-func _on_visible_on_screen_notifier_2d_screen_exited():
-	queue_free()
+	if is_wiggling:
+		wiggle_timer += 1
+		if wiggle_timer % wiggle_speed == 0:
+			rotation += wiggle_amount
+			wiggle_amount *= -1  # Change direction
 
 
 func _on_body_entered(body):
 	if body is Player:
 		body.die()
-	
 	queue_free()
+
+func start_wiggling():
+	is_wiggling = true

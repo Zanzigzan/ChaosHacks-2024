@@ -13,6 +13,7 @@ collision_layer = 2
 collision_mask = 3
 collision_priority = 2.0
 script = ExtResource("1_pvroe")
+speed = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visibility_layer = 3
@@ -21,7 +22,6 @@ shape = SubResource("CapsuleShape2D_y1pgl")
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
 [node name="RandomSprite" type="Sprite2D" parent="."]
-scale = Vector2(2, 2)
 texture = ExtResource("2_qonbe")
 region_enabled = true
 region_rect = Rect2(0, -0.127, 30.589, 51.937)
