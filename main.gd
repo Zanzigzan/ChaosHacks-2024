@@ -2,11 +2,8 @@ extends Node2D
 
 @export var enemy_scenes: Array[PackedScene] = []
 
-
 var scroll_speed = 1800
 var countEvent = 0
-
-@onready var enemy = get_node("res://enemy.gd")
 
 var screen_size
 
@@ -37,9 +34,8 @@ func _on_event_timer_timeout():
 	if countEvent == 0: 
 		$EventsMsgs.show_message("SNOWFALL!!!!", "Cars slowed by 50%")
 		countEvent += 1
-		$WigglingTimer.start()
+		
 	elif countEvent == 1:
-		$WigglingTimer.stop()
 		$EventsMsgs.show_message("RICHMOND DRIVER!!!!", "BE AWARE!!!")
 		countEvent += 1
 	elif countEvent == 2:
@@ -47,8 +43,4 @@ func _on_event_timer_timeout():
 	else:
 		$EventsMsgs.show_message("SNOW AND RICHMOND DRIVER!!!!", "CHAOOOS!!!")
 		
-
-
-func _on_wiggling_timer_timeout():
-	for enemy in $EnemyContainer.get_children():
-		enemy.set_wiggling(true)
+	

@@ -13,12 +13,12 @@ func start(pos):
 func _ready():
 	screen_size = get_viewport_rect().size
 	$CarStart.play()
+	$SoundTrack.play()
 	
 var input = Vector2.ZERO
 func _physics_process(delta):
 	player_movement(delta)
 	if Input.is_action_just_pressed("ui_horn"):
-		
 		$CarHorn.play()
 func get_input():
 	input.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
@@ -49,6 +49,7 @@ func player_movement(delta):
 
 func die():
 	crash = true
+	$SoundTrack.stop()
 	$Crash.play()
 	await get_tree().create_timer(1).timeout
 	queue_free()
