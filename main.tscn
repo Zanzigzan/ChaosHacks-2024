@@ -1,4 +1,6 @@
+
 [gd_scene load_steps=3 format=3 uid="uid://cco84wtna3y6g"]
+
 
 [ext_resource type="Texture2D" uid="uid://cj3471gxtfwn2" path="res://Resources/Background/GoogleMapsBG.png" id="1_5itkp"]
 [ext_resource type="Script" path="res://main.gd" id="1_7m5w8"]
