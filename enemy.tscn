@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://RandomSprite.gd" id="3_0imhu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y1pgl"]
-radius = 29.0
+radius = 25.0
 height = 104.0
 
 [node name="Enemy" type="Area2D"]
