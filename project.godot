@@ -17,5 +17,9 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=700
-window/size/viewport_height=1128
+window/size/viewport_width=564
+window/size/viewport_height=750
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
