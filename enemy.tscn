@@ -1,31 +1,25 @@
 [gd_scene load_steps=5 format=3 uid="uid://c0uf3xsnhgll4"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_pvroe"]
-[ext_resource type="Texture2D" uid="uid://dbobbkkvy31e4" path="res://tdrc01_car01_f.png" id="2_tweyl"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_7qsqa"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_tweyl")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[ext_resource type="Texture2D" uid="uid://ca0hxsb7qei2m" path="res://Resources/assets/cars.png" id="2_qonbe"]
+[ext_resource type="Script" path="res://RandomSprite.gd" id="3_0imhu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y1pgl"]
-radius = 29.0
-height = 144.0
+radius = 13.0
+height = 56.0
 
 [node name="Enemy" type="RigidBody2D"]
+position = Vector2(585, 299)
+gravity_scale = 0.0
 script = ExtResource("1_pvroe")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.25, 0.25)
-sprite_frames = SubResource("SpriteFrames_7qsqa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_y1pgl")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="RandomSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_qonbe")
+region_enabled = true
+region_rect = Rect2(0, -0.127, 30.589, 51.937)
+script = ExtResource("3_0imhu")
