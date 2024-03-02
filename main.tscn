@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cp54u6l2jlcvm"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7m5w8"]
-[ext_resource type="PackedScene" path="res://enemy.tscn" id="2_eitbt"]
+[ext_resource type="PackedScene" uid="uid://blejl2dspkg14" path="res://enemy.tscn" id="2_eitbt"]
 [ext_resource type="PackedScene" uid="uid://dcxs6lviy8iqy" path="res://Player/Player.tscn" id="3_foi4r"]
 [ext_resource type="Texture2D" uid="uid://dxk40741uyss1" path="res://Resources/Background/Road.png" id="3_rsyjb"]
 
