@@ -30,4 +30,4 @@ func player_movement(delta):
 	move_and_slide()
 
 func die():
-	print("x")
+	queue_free()

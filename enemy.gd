@@ -1,4 +1,4 @@
-class_name Enemy extends RigidBody2D
+class_name Enemy extends Area2D
 
 @export var speed = 150
 
@@ -10,6 +10,7 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 
 
 func _on_body_entered(body):
-	print("x")
+	if body is Player:
+		body.die()
 	
 	queue_free()
