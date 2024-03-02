@@ -10,8 +10,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$ParallaxBackground.scroll_offset.y += scroll_speed * delta
-	if $ParallaxBackground.scroll_offset.y >= 960:
-		$ParallaxBackground.scroll_offset.y = 0
+	#if $ParallaxBackground.scroll_offset.y >= 960:
+	#	$ParallaxBackground.scroll_offset.y = 0
 
 
 func _on_play_button_pressed():
