@@ -1,17 +1,18 @@
 extends CharacterBody2D
 
 const max_speed = 400
-const accel = 1500
-const friction = 600
+const accel = 3000
+const friction = 5000
 
 var input = Vector2.ZERO
 func _physics_process(delta):
 	player_movement(delta)
+	
 func get_input():
 	input.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
 	input.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
-	print("x", input.x)
-	print("y", input.y)
+	#print("x", input.x)
+	#print("y", input.y)
 	return input.normalized()
 
 	
