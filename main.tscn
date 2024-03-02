@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cco84wtna3y6g"]
+[gd_scene load_steps=5 format=3 uid="uid://cco84wtna3y6g"]
 
 [ext_resource type="Texture2D" uid="uid://cj3471gxtfwn2" path="res://Resources/Background/GoogleMapsBG.png" id="1_5itkp"]
 [ext_resource type="Script" path="res://main.gd" id="1_7m5w8"]
 [ext_resource type="PackedScene" uid="uid://dcxs6lviy8iqy" path="res://Player/Player.tscn" id="3_foi4r"]
+
+[sub_resource type="Curve2D" id="Curve2D_8atcv"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 75, -320, 0, 0, 0, 0, 605, -323, 0, 0, 0, 0, 72, -328, 0, 0, 0, 0, 75, -320)
+}
+point_count = 4
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_7m5w8")
@@ -20,4 +26,14 @@ region_enabled = true
 region_rect = Rect2(2.08165e-12, 2.08165e-12, 564, 1128)
 
 [node name="Player" parent="." instance=ExtResource("3_foi4r")]
-position = Vector2(409, 2006)
+position = Vector2(385, 826)
+
+[node name="EnemyTimer" type="Timer" parent="."]
+
+[node name="MobPath" type="Path2D" parent="."]
+position = Vector2(17, 2)
+curve = SubResource("Curve2D_8atcv")
+
+[node name="MobSpawning" type="PathFollow2D" parent="MobPath"]
+position = Vector2(75, -320)
+rotation = -0.00566032
