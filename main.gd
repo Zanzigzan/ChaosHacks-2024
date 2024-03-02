@@ -27,7 +27,7 @@ func _process(delta):
 		#$ParallaxBackground.scroll_offset.y = 0
 
 func _on_enemy_spawn_timer_timeout():
-	var enemy = enemy_scenes.pick_random().instantiate()
+	var enemy = enemy_scenes[0].instantiate()
 	enemy.global_position = Vector2(randf_range(240, 480), -50)
 	$EnemyContainer.add_child(enemy)
 	
@@ -42,6 +42,11 @@ func _on_event_timer_timeout():
 		$WigglingTimer.stop()
 		$EventsMsgs.show_message("RICHMOND DRIVER!!!!", "BE AWARE!!!")
 		countEvent += 1
+		
+		# Richmoooond Driiiveeeer
+		var enemy = enemy_scenes[1].instantiate()
+		enemy.global_position = Vector2(560, 1340)
+		$EnemyContainer.add_child(enemy)
 	elif countEvent == 2:
 		$EventsMsgs.show_message("CAUTION: ACIDENT AHEAD", "Transit!")
 	else:

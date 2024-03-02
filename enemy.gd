@@ -22,7 +22,10 @@ func _process(delta):
 func _on_body_entered(body):
 	if body is Player:
 		body.die()
-	queue_free()
+	die()
 
 func set_wiggling(wiggling):
 	is_wiggling = wiggling
+	
+func die():
+	queue_free()

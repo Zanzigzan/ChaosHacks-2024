@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://c4mbn6rga06c2" path="res://Resources/Sprites/CarV1.png" id="1_lk0x1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_txtrq"]
-radius = 59.0
-height = 298.0
+radius = 24.0
+height = 124.0
 
 [node name="RichmondDriver" type="Area2D"]
 position = Vector2(450, 1500)
@@ -15,15 +15,16 @@ script = ExtResource("1_fuvbh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-70.25, -145.25)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_lk0x1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-70, -150)
+position = Vector2(-70, -144)
 shape = SubResource("CapsuleShape2D_txtrq")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.5
 autostart = true
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
