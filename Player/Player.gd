@@ -28,4 +28,8 @@ func player_movement(delta):
 		velocity = velocity.limit_length(max_speed)
 	move_and_slide()
 
-		
+func _on_body_entered(body):
+	print("x")
+	if body is Enemy:
+		print("x")
+

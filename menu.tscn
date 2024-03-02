@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://06dijardu0nf"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_45moq"]
-[ext_resource type="Texture2D" uid="uid://cewjcjnmtbp2u" path="res://Resources/Background/GoogleMapsBG.png" id="2_b4660"]
+[ext_resource type="Texture2D" uid="uid://cj3471gxtfwn2" path="res://Resources/Background/GoogleMapsBG.png" id="2_b4660"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_45moq")
