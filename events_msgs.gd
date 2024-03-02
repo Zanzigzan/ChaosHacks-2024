@@ -14,12 +14,14 @@ func _process(delta):
 
 #call this function 
 func show_message(event, eventDescription):
-	$eventTitle.text=event
+	$eventTitle.text=event	
 	$eventDescription.text=eventDescription
 	$eventTitle.show()
 	$eventDescription.show()
 	$msgTimer.start()
+	
 
 
 func _on_msg_timer_timeout():
 	$eventTitle.hide()
+	

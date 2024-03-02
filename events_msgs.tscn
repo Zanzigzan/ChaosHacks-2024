@@ -1,6 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://r0qe4ipkl5k"]
+[gd_scene load_steps=6 format=3 uid="uid://r0qe4ipkl5k"]
 
 [ext_resource type="Script" path="res://events_msgs.gd" id="1_kk1pc"]
+[ext_resource type="FontFile" uid="uid://bkatl2ug4shvr" path="res://font/Capture it.ttf" id="2_21dwv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_eoahg"]
+font = ExtResource("2_21dwv")
+font_size = 20
+outline_size = 5
+outline_color = Color(0, 0, 1, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(5, 2)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8anwt"]
 bg_color = Color(0.611765, 0.596078, 0.596078, 1)
@@ -10,23 +20,32 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.980392, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_pannd"]
+font = ExtResource("2_21dwv")
+font_size = 29
+outline_size = 5
+outline_color = Color(1, 0, 0, 1)
+shadow_size = 5
+
 [node name="Events Msgs" type="CanvasLayer"]
 script = ExtResource("1_kk1pc")
 
 [node name="eventTitle" type="Label" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = -1
+anchor_left = 0.496
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 0.496
 anchor_bottom = 0.5
-offset_left = -97.0
+offset_left = -346.2
 offset_top = -30.0
-offset_right = -26.0
+offset_right = -69.2
 offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.5, 2.5)
 size_flags_horizontal = 4
+label_settings = SubResource("LabelSettings_eoahg")
+horizontal_alignment = 1
 
 [node name="eventDescription" type="Label" parent="."]
 anchors_preset = 3
@@ -39,6 +58,9 @@ offset_top = -75.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_8anwt")
+label_settings = SubResource("LabelSettings_pannd")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="msgTimer" type="Timer" parent="."]
 wait_time = 2.0
