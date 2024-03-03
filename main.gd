@@ -48,7 +48,9 @@ func _on_event_timer_timeout():
 		$EventsMsgs.show_message("ACIDENT AHEAD", "Transit!")
 		countEvent += 1
 	else:
-		$EventsMsgs.show_message("SNOW AND RICHMOND DRIVER!!!!", "CHAOOOS!!!")
+		$WigglingTimer.start()
+		$DoomTimer.start()
+		$EventsMsgs.show_message("DOOOOOOOM!!!!", "CHAOOOS!!!")
 		
 	
 
@@ -56,3 +58,9 @@ func _on_event_timer_timeout():
 func _on_wiggling_timer_timeout():
 	for enemy in $EnemyContainer.get_children():
 		enemy.set_wiggling(true)
+
+
+func _on_doom_timer_timeout():
+	var e = enemy_scenes[1].instantiate()
+	e.global_position = Vector2(560, 1340)
+	$EnemyContainer.add_child(e)
