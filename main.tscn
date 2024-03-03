@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cp54u6l2jlcvm"]
+[gd_scene load_steps=9 format=3 uid="uid://cp54u6l2jlcvm"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7m5w8"]
 [ext_resource type="PackedScene" uid="uid://c0uf3xsnhgll4" path="res://enemy.tscn" id="2_eitbt"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dxk40741uyss1" path="res://Resources/Background/Road.png" id="3_spre1"]
 [ext_resource type="PackedScene" uid="uid://b5lbwy5hprciv" path="res://richmond_driver.tscn" id="3_y72yp"]
 [ext_resource type="PackedScene" uid="uid://r0qe4ipkl5k" path="res://events_msgs.tscn" id="5_wichx"]
+[ext_resource type="PackedScene" uid="uid://xy3ljv862ypo" path="res://PauseController.tscn" id="7_guolv"]
 
 [sub_resource type="Curve2D" id="Curve2D_8atcv"]
 _data = {
@@ -51,9 +52,6 @@ autostart = true
 
 [node name="WigglingTimer" type="Timer" parent="."]
 wait_time = 0.5
-
-[node name="DoomTimer" type="Timer" parent="."]
-wait_time = 2.0
 
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]
 [connection signal="timeout" from="EventTimer" to="." method="_on_event_timer_timeout"]
