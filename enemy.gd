@@ -6,8 +6,12 @@ var wiggle_amount = .5  # Adjust for more or less wiggle
 var wiggle_speed = 10 # Lower is faster, higher is slower
 var wiggle_timer = 0
 var crash = false
+var random = randi()%3
+var carType = 32 * random
+
+
 func _ready():
-	pass
+	$RandomSprite.region_rect = Rect2(carType, 0, 27, 52.3)
 
 func _process(delta):
 	global_position.y += speed * delta

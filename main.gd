@@ -34,9 +34,13 @@ func _on_event_timer_timeout():
 	if countEvent == 0: 
 		$EventsMsgs.show_message("SNOWFALL!!!!", "Cars slowed by 50%")
 		countEvent += 1
+		
 		$WigglingTimer.start()
+		scroll_speed = scroll_speed / 2
 	elif countEvent == 1:
 		$WigglingTimer.stop()
+		scroll_speed = scroll_speed * 2
+			
 		$EventsMsgs.show_message("RICHMOND DRIVER!!!!", "BE AWARE!!!")
 		countEvent += 1
 		
@@ -44,9 +48,9 @@ func _on_event_timer_timeout():
 		var enemy = enemy_scenes[1].instantiate()
 		enemy.global_position = Vector2(560, 1340)
 		$EnemyContainer.add_child(enemy)
-	elif countEvent == 2:
-		$EventsMsgs.show_message("ACIDENT AHEAD", "Transit!")
-		countEvent += 1
+	#elif countEvent == 2:
+		#$EventsMsgs.show_message("ACIDENT AHEAD", "Transit!")
+		#countEvent += 1
 	else:
 		$WigglingTimer.start()
 		$DoomTimer.start()
