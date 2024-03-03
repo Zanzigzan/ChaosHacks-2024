@@ -1,8 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://r0qe4ipkl5k"]
+[gd_scene load_steps=12 format=3 uid="uid://r0qe4ipkl5k"]
 
 [ext_resource type="Script" path="res://events_msgs.gd" id="1_kk1pc"]
 [ext_resource type="FontFile" uid="uid://bkatl2ug4shvr" path="res://font/Capture it.ttf" id="2_21dwv"]
 [ext_resource type="Texture2D" uid="uid://ceblghs8mf76c" path="res://Resources/assets/elmo.png" id="3_mkluo"]
+[ext_resource type="Texture2D" uid="uid://cbcblsy1prms7" path="res://Resources/Sprites/Snow/Snow1.png" id="4_xk0q2"]
+[ext_resource type="Texture2D" uid="uid://bhrx6faxpgh68" path="res://Resources/Sprites/Snow/Snow2.png" id="5_1u4dn"]
+[ext_resource type="Texture2D" uid="uid://donfpmch7isln" path="res://Resources/Sprites/Snow/Snow3.png" id="6_acaau"]
+[ext_resource type="Texture2D" uid="uid://bhukvys45m764" path="res://Resources/Sprites/Snow/Snow4.png" id="7_vrwhl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eoahg"]
 font = ExtResource("2_21dwv")
@@ -27,6 +31,31 @@ font_size = 29
 outline_size = 5
 outline_color = Color(1, 0, 0, 1)
 shadow_size = 5
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qj7ot"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("4_xk0q2")
+}, {
+"duration": 0.5,
+"texture": ExtResource("5_1u4dn")
+}, {
+"duration": 0.5,
+"texture": ExtResource("6_acaau")
+}, {
+"duration": 0.5,
+"texture": ExtResource("7_vrwhl")
+}],
+"loop": true,
+"name": &"snow",
+"speed": 5.0
+}]
 
 [node name="Events Msgs" type="CanvasLayer"]
 script = ExtResource("1_kk1pc")
@@ -75,5 +104,12 @@ offset_right = 458.0
 offset_bottom = 746.0
 texture = ExtResource("3_mkluo")
 expand_mode = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(365, 562)
+sprite_frames = SubResource("SpriteFrames_qj7ot")
+animation = &"snow"
+frame = 2
+frame_progress = 0.00727943
 
 [connection signal="timeout" from="msgTimer" to="." method="_on_msg_timer_timeout"]
