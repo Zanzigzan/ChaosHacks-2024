@@ -18,10 +18,12 @@ func show_message(event, eventDescription):
 	$eventDescription.text=eventDescription
 	$eventTitle.show()
 	$eventDescription.show()
+	$Elmo.show()
 	$msgTimer.start()
 	
 
 
 func _on_msg_timer_timeout():
 	$eventTitle.hide()
+	$Elmo.hide()
 	

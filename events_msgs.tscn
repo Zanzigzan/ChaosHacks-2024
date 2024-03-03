@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://r0qe4ipkl5k"]
+[gd_scene load_steps=7 format=3 uid="uid://r0qe4ipkl5k"]
 
 [ext_resource type="Script" path="res://events_msgs.gd" id="1_kk1pc"]
 [ext_resource type="FontFile" uid="uid://bkatl2ug4shvr" path="res://font/Capture it.ttf" id="2_21dwv"]
+[ext_resource type="Texture2D" uid="uid://ceblghs8mf76c" path="res://Resources/assets/elmo.png" id="3_mkluo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eoahg"]
 font = ExtResource("2_21dwv")
@@ -65,5 +66,14 @@ vertical_alignment = 1
 [node name="msgTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="Elmo" type="TextureRect" parent="."]
+visible = false
+offset_left = 223.0
+offset_top = 591.0
+offset_right = 458.0
+offset_bottom = 746.0
+texture = ExtResource("3_mkluo")
+expand_mode = 1
 
 [connection signal="timeout" from="msgTimer" to="." method="_on_msg_timer_timeout"]
