@@ -4,9 +4,10 @@ var time = 0
 var turn = true
 
 @export var speed = 200
+
 func _ready():
 	$RM.play()
-	
+
 func _physics_process(delta):
 	global_position.y -= speed * delta
 	
@@ -23,8 +24,12 @@ func _on_timer_timeout():
 	turn = not turn
 
 
+
+func _on_area_entered(area):
+	if area is Enemy:
+		area.die()
+
+
 func _on_body_entered(body):
 	if body is Player:
-		body.die()
-	if body is Enemy:
 		body.die()

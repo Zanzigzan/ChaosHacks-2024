@@ -32,7 +32,7 @@ func get_input():
 
 func player_movement(delta):
 	input= get_input()
-	print(crash)
+	#print(crash)
 	if input == Vector2.ZERO:
 		if velocity.length() > (friction * delta):
 			velocity -= velocity.normalized() * (friction * delta)

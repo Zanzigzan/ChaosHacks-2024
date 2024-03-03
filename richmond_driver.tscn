@@ -10,8 +10,8 @@ height = 124.0
 
 [node name="RichmondDriver" type="Area2D"]
 position = Vector2(450, 1500)
-collision_layer = 2
-collision_mask = 3
+collision_layer = 6
+collision_mask = 7
 script = ExtResource("1_fuvbh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -31,5 +31,6 @@ autostart = true
 stream = ExtResource("3_sb7oo")
 volume_db = -0.5
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
