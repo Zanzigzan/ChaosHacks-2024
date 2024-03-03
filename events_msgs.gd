@@ -26,6 +26,8 @@ func show_message(event, eventDescription):
 		snow.play("snow")
 	if event == "RICHMOND DRIVER!!!!":
 		snow.hide()
+	if event == "DOOOOOOOM!!!!":
+		snow.show()
 	$Elmo.show()
 	$msgTimer.start()
 	
