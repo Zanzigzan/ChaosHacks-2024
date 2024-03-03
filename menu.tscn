@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://06dijardu0nf"]
+[gd_scene load_steps=7 format=3 uid="uid://06dijardu0nf"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_45moq"]
 [ext_resource type="Texture2D" uid="uid://dxk40741uyss1" path="res://Resources/Background/Road.png" id="2_53ihc"]
+[ext_resource type="FontFile" uid="uid://bkatl2ug4shvr" path="res://font/Capture it.ttf" id="3_8nrfg"]
 [ext_resource type="Texture2D" uid="uid://4avyxhg5gl04" path="res://New Project.png" id="3_y3x0m"]
+[ext_resource type="Texture2D" uid="uid://byrpj6ej8eyrr" path="res://Resources/assets/carForMenu.png" id="4_j2kdc"]
+[ext_resource type="Texture2D" uid="uid://bra642w2ex4c" path="res://Resources/assets/carForMenu2.png" id="5_wo3y1"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_45moq")
@@ -19,20 +22,38 @@ texture = ExtResource("2_53ihc")
 centered = false
 
 [node name="PlayButton" type="Button" parent="."]
-offset_left = 130.0
-offset_top = 535.0
-offset_right = 270.0
-offset_bottom = 885.0
+offset_left = 63.0
+offset_top = 532.0
+offset_right = 321.0
+offset_bottom = 892.0
 tooltip_text = "Start the game!"
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.658824, 0.254902, 0.227451, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_8nrfg")
+theme_override_font_sizes/font_size = 45
 text = "PLAY"
+icon = ExtResource("4_j2kdc")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
 
 [node name="QuitButton" type="Button" parent="."]
-offset_left = 448.0
-offset_top = 530.0
-offset_right = 588.0
-offset_bottom = 880.0
+offset_left = 358.0
+offset_top = 529.0
+offset_right = 616.0
+offset_bottom = 889.0
 tooltip_text = "Quit the game to the desktop"
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_color = Color(0.2, 0.329412, 0.576471, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_8nrfg")
+theme_override_font_sizes/font_size = 45
 text = "QUIT"
+icon = ExtResource("5_wo3y1")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -36.0
