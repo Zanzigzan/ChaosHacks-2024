@@ -3,7 +3,7 @@ extends Area2D
 var time = 0
 var turn = true
 var is_wiggling = false
-var wiggle_amount = .2  # Adjust for more or less wiggle
+var wiggle_amount = .1  # Adjust for more or less wiggle
 var wiggle_speed = 10 # Lower is faster, higher is slower
 var wiggle_timer = 0
 
