@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dgbws5b6n4g6x"
+path="res://.godot/imported/Chinese Rap (BASS BOOSTED).mp3-73a2c9ad453f6676d1837ccc65f48a79.mp3str"
+
+[deps]
+
+source_file="res://VDS sounds/Chinese Rap (BASS BOOSTED).mp3"
+dest_files=["res://.godot/imported/Chinese Rap (BASS BOOSTED).mp3-73a2c9ad453f6676d1837ccc65f48a79.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

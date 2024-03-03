@@ -4,7 +4,9 @@ var time = 0
 var turn = true
 
 @export var speed = 200
-
+func _ready():
+	$RM.play()
+	
 func _physics_process(delta):
 	global_position.y -= speed * delta
 	
