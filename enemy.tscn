@@ -25,7 +25,7 @@ shape = SubResource("CapsuleShape2D_y1pgl")
 scale = Vector2(2, 2)
 texture = ExtResource("2_qonbe")
 region_enabled = true
-region_rect = Rect2(0, -0.127, 30.589, 51.937)
+region_rect = Rect2(32, -0.127, 32, 52.342)
 script = ExtResource("3_0imhu")
 
 [node name="Crash" type="AudioStreamPlayer2D" parent="."]

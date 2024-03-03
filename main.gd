@@ -48,9 +48,9 @@ func _on_event_timer_timeout():
 		var enemy = enemy_scenes[1].instantiate()
 		enemy.global_position = Vector2(560, 1340)
 		$EnemyContainer.add_child(enemy)
-	elif countEvent == 2:
-		$EventsMsgs.show_message("ACIDENT AHEAD", "Transit!")
-		countEvent += 1
+	#elif countEvent == 2:
+		#$EventsMsgs.show_message("ACIDENT AHEAD", "Transit!")
+		#countEvent += 1
 	else:
 		$WigglingTimer.start()
 		$DoomTimer.start()

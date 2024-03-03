@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c0uf3xsnhgll4" path="res://enemy.tscn" id="2_eitbt"]
 [ext_resource type="PackedScene" uid="uid://dcxs6lviy8iqy" path="res://Player.tscn" id="3_foi4r"]
 [ext_resource type="Texture2D" uid="uid://dxk40741uyss1" path="res://Resources/Background/Road.png" id="3_spre1"]
-[ext_resource type="PackedScene" uid="uid://b5lbwy5hprciv" path="res://richmond_driver.tscn" id="3_y72yp"]
+[ext_resource type="PackedScene" path="res://richmond_driver.tscn" id="3_y72yp"]
 [ext_resource type="PackedScene" uid="uid://r0qe4ipkl5k" path="res://events_msgs.tscn" id="5_wichx"]
 
 [sub_resource type="Curve2D" id="Curve2D_8atcv"]
